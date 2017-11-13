@@ -1,0 +1,21 @@
+{
+  "name": "ng-ci-lab",
+  "description": "woop woop",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "stack": "heroku-16",
+  "env": {
+    "APP_SKIN": {
+      "required": true
+    },
+  },
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "npm test"
+      }
+    }
+  },
+  "formation": {}
+}

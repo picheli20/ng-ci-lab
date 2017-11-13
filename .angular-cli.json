@@ -1,31 +1,97 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "ng-ci-lab"
+    "name": "brands"
   },
   "apps": [
     {
+      "name": "red",
       "root": "src",
-      "outDir": "dist",
+      "outDir": "dist/red",
       "assets": [
-        "assets",
-        "favicon.ico"
+        { "glob": "**/*", "input": "red/assets/", "output": "./assets/" },
+        { "glob": "favicon.ico", "input": "red/", "output": "./" }
       ],
-      "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",
-      "test": "test.ts",
-      "tsconfig": "tsconfig.app.json",
+      "index": "red/index.html",
+      "main": "red/main.ts",
+      "polyfills": "red/polyfills.ts",
+      "test": "red/test.ts",
+      "tsconfig": "tsconfig.red.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "red/styles.scss"
       ],
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "red/scss"
+        ]
+      },
       "scripts": [],
-      "environmentSource": "environments/environment.ts",
+      "environmentSource": "red/environments/environment.ts",
       "environments": {
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
+        "dev": "red/environments/environment.ts",
+        "prod": "red/environments/environment.prod.ts"
+      }
+    },
+    {
+      "name": "blue",
+      "root": "src",
+      "outDir": "dist/blue",
+      "assets": [
+        { "glob": "**/*", "input": "blue/assets/", "output": "./assets/" },
+        { "glob": "favicon.ico", "input": "blue/", "output": "./" }
+      ],
+      "index": "blue/index.html",
+      "main": "blue/main.ts",
+      "polyfills": "blue/polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.blue.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "blue/styles.scss"
+      ],
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "blue/scss"
+        ]
+      },
+      "scripts": [],
+      "environmentSource": "blue/environments/environment.ts",
+      "environments": {
+        "dev": "blue/environments/environment.ts",
+        "prod": "blue/environments/environment.prod.ts"
+      }
+    },
+    {
+      "name": "green",
+      "root": "src",
+      "outDir": "dist/green",
+      "assets": [
+        { "glob": "**/*", "input": "green/assets/", "output": "./assets/" },
+        { "glob": "favicon.ico", "input": "green/", "output": "./" }
+      ],
+      "index": "green/index.html",
+      "main": "green/main.ts",
+      "polyfills": "green/polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.green.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "green/styles.scss"
+      ],
+      "stylePreprocessorOptions": {
+        "includePaths": [
+          "green/scss"
+        ]
+      },
+      "scripts": [],
+      "environmentSource": "green/environments/environment.ts",
+      "environments": {
+        "dev": "green/environments/environment.ts",
+        "prod": "green/environments/environment.prod.ts"
       }
     }
   ],
@@ -54,7 +120,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }
