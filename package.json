@@ -12,7 +12,7 @@
     "build:red": "ng build --app=red --prod",
     "build:blue": "ng build --app=blue --prod",
     "build:green": "ng build --app=green --prod",
-    "test": "for app in ${APP_OPTIONS:-red blue green}; do APP=$app npm run test:app; if [ $? -ne 0 ]; then echo ERROR; exit 666; fi; done",
+    "test:all": "for app in ${APP_OPTIONS:-red blue green}; do APP=$app npm run test:app; if [ $? -ne 0 ]; then echo ERROR; exit 666; fi; done",
     "test:app": "ng test --app=${APP} --watch false",
     "test:red": "ng test --app=red --watch false",
     "test:blue": "ng test --app=blue --watch false",
