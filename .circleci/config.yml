@@ -7,8 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:7.10
-      - image: circleci/node:7-browsers
+      - image: circleci/node:7.10.0-browsers
 
     working_directory: ~/repo
 
@@ -21,6 +20,13 @@ jobs:
           - v1-dependencies-{{ checksum "package.json" }}
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
+
+      - run:
+          name: update chrome
+          command: |
+            sudo apt-get install lsb-release
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo dpkg -i google-chrome-stable_current_amd64.deb
 
       - run: npm i
 

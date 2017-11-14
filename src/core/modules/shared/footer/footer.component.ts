@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { timer } from 'rxjs/Observable/timer';
-import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-footer',

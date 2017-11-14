@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { timer } from 'rxjs/Observable/timer';
-import 'rxjs/add/operator/map';
 
 import { FooterComponent as CoreFooterComponent } from 'core/modules/shared/footer/footer.component';
 
