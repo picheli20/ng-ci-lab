@@ -12,7 +12,7 @@
     "build:red": "ng build --app=red --prod",
     "build:blue": "ng build --app=blue --prod",
     "build:green": "ng build --app=green --prod",
-    "test": "ng test",
+    "test": "ng test --app=red && ng test --app=blue && ng test --app=green",
     "test:red": "ng test --app=red",
     "test:blue": "ng test --app=blue",
     "test:green": "ng test --app=green",
