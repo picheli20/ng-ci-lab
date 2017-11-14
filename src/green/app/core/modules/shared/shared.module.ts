@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ClockComponent } from 'core/modules/shared/clock/clock.component';
-import { FooterComponent as CoreFooterComponent } from 'core/modules/shared/footer/footer.component';
+import { SharedModule as CoreSharedModule } from 'core/modules/shared/shared.module';
 
 import { FooterComponent } from './footer/footer.component';
 
@@ -12,11 +11,9 @@ import { FooterComponent } from './footer/footer.component';
   ],
   declarations: [
     FooterComponent,
-    ClockComponent,
   ],
   exports: [
     FooterComponent,
-    ClockComponent,
   ],
 })
-export class SharedModule { }
+export class SharedModule extends CoreSharedModule { }
