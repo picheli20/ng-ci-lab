@@ -37,3 +37,25 @@ jobs:
 
       # run tests!
       - run: npm run test
+
+      - run:
+          name: Code Lint
+          command: npm run lint
+
+      - run:
+          name: Red
+          command:
+            npm run test:red &&
+            npm run build:red
+
+      - run:
+          name: Blue
+          command:
+            npm run test:blue &&
+            npm run build:blue
+
+      - run:
+          name: Green tests
+          command:
+            npm run test:green &&
+            npm run build:green
