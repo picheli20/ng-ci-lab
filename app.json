@@ -8,7 +8,7 @@
   "env": {
     "APP_SKIN": {
       "required": true
-    },
+    }
   },
   "environments": {
     "test": {
