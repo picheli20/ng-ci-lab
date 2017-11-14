@@ -37,3 +37,15 @@ jobs:
 
       # run tests!
       - run: npm run test
+
+      - run:
+          name: Red tests
+          command: npm run test:red
+
+      - run:
+          name: Blue tests
+          command: npm run test:blue
+
+      - run:
+          name: Green tests
+          command: npm run test:green
