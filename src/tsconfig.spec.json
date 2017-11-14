@@ -15,6 +15,9 @@
     "test.ts"
   ],
   "include": [
+    "./red/test.ts",
+    "./blue/test.ts",
+    "./green/test.ts",
     "**/*.spec.ts",
     "**/*.d.ts"
   ]
